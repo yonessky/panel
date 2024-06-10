@@ -159,6 +159,44 @@ img {
 
 
 /*=============== HOME ===============*/
+.home__container {
+  /* height: 100vh; */
+  padding-block: 9rem 2rem;
+  display: grid;
+  align-items: center;
+  row-gap: 6rem;
+}
+
+.home__content {
+  position: relative;
+  display: grid;
+}
+
+.home__circle {
+  position: absolute;
+  inset: 0;
+  width: 280px;
+  height: 280px;
+  border: 3px solid var(--first-color-lighten);
+  border-radius: 50%;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+}
+
+.home__subcircle {
+  width: 246px;
+  height: 246px;
+  border: 12px solid var(--first-color-light);
+  border-radius: 50%;
+}
+
+.home__title {
+  position: absolute;
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  font-weight: var(--font-regular);
+}
 
 
 /* Swiper class */
