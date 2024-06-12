@@ -39,6 +39,10 @@ let swiperHome = new Swiper('.home__swiper', {
         prevEl: '.swiper-button-prev',
     },
 
+
+
+
+    
     breakpoints: {
         768: {
             slidesPerView: 3,
@@ -52,6 +56,24 @@ let swiperHome = new Swiper('.home__swiper', {
 })
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
-
+const bgHeader = () => {
+    const header = document.getElementById('header')
+    // Add a class if the bottom offset is greater than 50 ot the
+    this.scrollY >= 50 ? header.classList.add('bg-header')
+                       : header.classList.remove('bg-header')
+}
+window.addEventListener('scroll', bgHeader)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    // reset: true // Animation repeat
+})
+
+sr.reveal(`.home__swiper, .home__footer`)
+sr.reveal(`.home__circle`, {scale: 1.5, delay: 300})
+sr.reveal(`.home__subcircle`, {scale: 1.5, delay: 500})
+sr.reveal(`.home__title`, {scale: 1, origin: 'bottom', delay: 1200})
+sr.reveal(`.swiper-button-prev, .swiper-button-next`, {origin: 'bottom'})
