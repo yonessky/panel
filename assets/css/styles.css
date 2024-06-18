@@ -7,10 +7,12 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(34, 52%, 54%);
+  /* --first-color: hsl(34, 52%, 54%); */
+  --first-color: hsl(200, 100%, 53%);
   --first-color-light: hsl(34, 52%, 64%);
   --first-color-lighten: hsl(34, 52%, 68%);
   --black-color: hsl(0, 0%, 4%);
+  --light-color: hsl(0, 0%, 4%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -197,7 +199,7 @@ img {
 
 .home__title {
   position: absolute;
-  font-size: var(--biggest-font-size);
+  font-size: 4rem;
   font-family: var(--second-font);
   font-weight: var(--font-regular);
 }
