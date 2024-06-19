@@ -9,8 +9,8 @@
   /*Color mode HSL(hue, saturation, lightness)*/
   /* --first-color: hsl(34, 52%, 54%); */
   --first-color: hsl(200, 100%, 53%);
-  --first-color-light: hsl(34, 52%, 64%);
-  --first-color-lighten: hsl(34, 52%, 68%);
+  --first-color-light: hsl(60,100%,88%);
+  --first-color-lighten: hsl(33,79.6%,73.1%);
   --black-color: hsl(0, 0%, 4%);
   --light-color: hsl(0, 0%, 4%);
 
