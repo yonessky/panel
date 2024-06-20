@@ -301,12 +301,31 @@ img {
 }
 
 /* For medium devices */
+@media screen and (min-width: 480px) {
+  .home__circle {
+    width: 480px;
+    height: 480px;
+  }
+
+  .home__subcircle {
+    width: 446px;
+    height: 446px;
+  }
+  .home__img {
+    width: 400px;
+    margin-bottom: 5rem;
+  }
+}
+
+
+/* For medium devices */
 @media screen and (min-width: 768px) {
   .nav__menu {
     width: 50%;
   }
 
   .home__article {
+    /* outline: 1px solid white; */
     scale: .6;
     transition: scale .3s;
   }
@@ -315,6 +334,10 @@ img {
   .home__price {
     opacity: 0;
     transition: opacity .3s;
+  }
+  .home__img {
+    width: 400px;
+    margin-bottom: 5rem;
   }
 
   /* Swiper class */
