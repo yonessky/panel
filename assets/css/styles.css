@@ -8,13 +8,13 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   /* --first-color: hsl(34, 52%, 54%); */
-  --first-color: hsl(200, 100%, 53%);
+  --first-color: hsl(200, 81%, 31%);
   --first-color-light: hsl(60,100%,88%);
   --first-color-lighten: hsl(33,79.6%,73.1%);
   --black-color: hsl(0, 0%, 4%);
-  --light-color: hsl(0, 0%, 4%);
+  --light-color: hsl(0, 0%, 100%);
 
-  /*========== Font and typography ==========*/
+  /*========== Font and typography == ========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
   --second-font: "Smooch", cursive;
@@ -53,7 +53,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--first-color);
-  color: var(--black-color);
+  color: var(--light-color);
 }
 
 ul {
@@ -100,7 +100,7 @@ img {
 }
 
 .nav__logo {
-  color: var(--black-color);
+  color: var(--light-color);
   font-weight: var(--font-semi-bold);
 }
 
@@ -138,7 +138,7 @@ img {
 }
 
 .nav__link {
-  color: var(--black-color);
+  color: var(--light-color);
   font-weight: var(--font-semi-bold);
 }
 
@@ -174,6 +174,7 @@ img {
 }
 
 .home__content {
+  /* outline: 1px solid white; */
   position: relative;
   display: grid;
 }
@@ -205,7 +206,7 @@ img {
 }
 
 .home__img {
-  width: 250px;
+  width: 2500px;
   filter: drop-shadow(-8px 8px 16px hsla(34, 51%, 8%, .4));
   margin: 0 auto 2rem;
 }
@@ -242,7 +243,7 @@ img {
 
 .home__social-link {
   font-size: 1.25rem;
-  color: var(--black-color);
+  color: var(--light-color);
 }
 
 
@@ -262,7 +263,7 @@ img {
   top: initial;
   bottom: 0;
   font-size: 1.5rem;
-  color: var(--black-color);
+  color: var(--light-color);
 }
 
 .swiper-button-prev {
@@ -383,6 +384,7 @@ img {
   }
 
   .home__swiper {
+    outline: 1px solid white;
     max-width: 1100px;
     margin-inline: auto;
   }
