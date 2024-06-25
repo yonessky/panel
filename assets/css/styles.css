@@ -274,6 +274,108 @@ img {
   right: calc(50% - 8rem);
 }
 
+/*=============== POPUP MODAL ===============*/
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(5, 90%, 4%, .2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(24px);
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: var(--z-modal);
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal__card {
+  position: relative;
+  background-color: var(--body-color);
+  padding: 3rem 1.25rem 2rem;
+  display: grid;
+  row-gap: 1.5rem;
+  text-align: center;
+  transform: rotateX(90deg);
+  transition: transform .6s;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.modal__img {
+  width: 220px;
+  justify-self: center;
+  filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2));
+}
+
+.modal__name {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: .5rem;
+}
+
+.modal__info {
+  margin-bottom: 1rem;
+}
+
+.modal__price {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--first-color);
+}
+
+.modal__buttons {
+  display: flex;
+  gap: .5rem;
+}
+
+.modal__button {
+  flex-grow: 1;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  padding-block: 1rem;
+  color: var(--white-color);
+  font: var(--font-semi-bold) var(--normal-font-size) var(--body-font);
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.modal__button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.modal__button-ghost {
+  background-color: var(--body-color);
+  color: var(--title-color);
+  border: 3px solid var(--first-color);
+}
+
+.modal__button-ghost:hover {
+  background-color: var(--body-color);
+}
+
+/* Active modal */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+.active-modal .modal__card {
+  transform: rotateX(0);
+}
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 330px){
@@ -298,6 +400,9 @@ img {
   .home__subcircle {
     width: 206px;
     height: 206px;
+  }
+  .modal__buttons {
+    flex-direction: column;
   }
 }
 
@@ -433,6 +538,10 @@ img {
 
   .home__social-link {
     font-size: 1.5rem;
+  }
+
+  .modal__buttons {
+    column-gap: 1rem;
   }
 
   ::-webkit-scrollbar {
