@@ -172,7 +172,7 @@ img {
 
 /*=============== HOME ===============*/
 .home__container {
-  height: 100vh;
+  height: initial;
   padding-block: 9rem 2rem;
   display: grid;
   align-items: center;
@@ -444,6 +444,7 @@ img {
   }
   .modal {
     padding: 1rem;
+    height: initial;
   }
 }
 
