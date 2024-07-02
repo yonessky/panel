@@ -77,7 +77,7 @@ sr.reveal(`.swiper-button-prev, .swiper-button-next`, { origin: "bottom" });
 
 /*======================= CARD POPUP JS ======================*/
 const modal = document.querySelectorAll(".modal"),
-  cardBtn = document.querySelectorAll(".card__product"),
+  cardBtn = document.querySelectorAll(".home__article"),
   modalClose = document.querySelectorAll(".modal__close"),
   modalCard = document.querySelectorAll(".modal__card");
 
