@@ -282,7 +282,11 @@ img {
 
 /*=============== POPUP MODAL ===============*/
 .modal {
+  overflow-y: auto;
   position: fixed;
+  /* z-index: var(--z-modal); */
+  z-index: 1;
+  overflow-x: hidden;
   inset: 0;
   background-color: hsla(5, 90%, 4%, .3);
   backdrop-filter: blur(16px);
@@ -293,7 +297,7 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  z-index: var(--z-modal);
+  
   transition: opacity .4s, visibility .4s;
   border-radius: 2rem 0 2rem 0;
 }
