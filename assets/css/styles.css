@@ -280,7 +280,6 @@ img {
   overflow-y: auto;
   position: fixed;
   /* z-index: var(--z-modal); */
-  z-index: 3;
   overflow-x: hidden;
   inset: 0;
   background-color: hsla(5, 90%, 4%, .3);
@@ -292,9 +291,10 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition: opacity .4s, visibility .4s;
-  border-radius: 2rem 0 2rem 0;
+  border-radius: 1rem 1rem 1rem 1rem;
+  border: 1px solid wheat;
+  z-index: 10;
 }
 
 .modal__card {
@@ -522,14 +522,12 @@ img {
   }
 
   .home__container {
-    outline: 1px solid white;
     height: initial;
     padding-top: 10rem;
   }
 
   .home__swiper {
-    /* outline: 1px solid white; */
-    /* max-width: 1100px; */
+    max-width: 1100px;
     margin-inline: auto;
     z-index: 0;
   }

@@ -26,18 +26,18 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    z-index: 1
+    z-index: 0
 }
 
 .swiper {
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     /* overflow: hidden; */
     list-style: none;
     /* padding: 0; */
-    /* z-index: 1; */
-    /* display: block */
+    z-index: 0;
+    display: block
 }
 
 .swiper-vertical>.swiper-wrapper {
@@ -283,7 +283,7 @@
     width: calc(var(--swiper-navigation-size)/ 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 1;
+    z-index: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -370,7 +370,7 @@
     text-align: center;
     transition: .3s opacity;
     transform: translate3d(0, 0, 0);
-    z-index: 1
+    z-index: 0
 }
 
 .swiper-pagination.swiper-pagination-hidden {
