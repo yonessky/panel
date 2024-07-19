@@ -27,7 +27,7 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-/*=============== SWIPER CLOTHING ===============*/
+/*=============== SWIPER JANGAN MENCURI===============*/
 let swiperHome = new Swiper(".home__swiper", {
   loop: true,
   grabCursor: true,
@@ -109,8 +109,8 @@ modal.forEach((modal) => {
 });
 
 /* Don't hide modal on card click (by event propagation) */
-modalCard.forEach((modalCard) => {
-  modalCard.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
-});
+// modalCard.forEach((modalCard) => {
+//   modalCard.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//   });
+// });
