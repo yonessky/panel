@@ -109,8 +109,8 @@ modal.forEach((modal) => {
 });
 
 /* Don't hide modal on card click (by event propagation) */
-// modalCard.forEach((modalCard) => {
-//   modalCard.addEventListener("click", (e) => {
-//     e.stopPropagation();
-//   });
-// });
+modalCard.forEach((modalCard) => {
+  modalCard.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
