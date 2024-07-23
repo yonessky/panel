@@ -18,16 +18,24 @@ if (navClose) {
 }
 
 /*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link');
+const navLink = document.querySelectorAll('.nav__link')
 
-const linkAction = () =>{
-    const navMenu = document.getElementById('nav-menu');
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu');
+const linkAction = () => {
+  const navMenu = document.getElementById('nav-menu')
+  // When we click on each nav__link, we remove the show-menu class
+  navMenu.classList.remove('show-menu')
 }
-navLink.forEach(n => n.addEventListener("click", linkAction));
+navLink.forEach((n) => n.addEventListener('click', linkAction))
 
 /*=============== ADD SHADOW HEADER ===============*/
+const shadowHeader = () => {
+  const header = document.getElementById('header')
+  // When the scroll is greater than 50 viewport height, add the scroll-header class to the
+  this.scrollY >= 50
+    ? header.classList.add('shadow-header')
+    : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll', shadowHeader)
 
 /*=============== SHOW SCROLL UP ===============*/
 
