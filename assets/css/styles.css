@@ -1,5 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Smooch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@100..900&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -8,7 +8,7 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   /* --first-color: hsl(34, 52%, 54%); */
-  --first-color: hsl(200, 81%, 31%);
+  --first-color: hsl(200, 89%, 18%);
   --first-color-light: hsl(60, 100%, 88%);
   --first-color-lighten: hsl(33, 79.6%, 73.1%);
   --black-color: hsl(0, 0%, 4%);
@@ -18,7 +18,7 @@
   /*========== Font and typography == ========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Montserrat", sans-serif;
-  --second-font: "Smooch", cursive;
+  --second-font: "Aclonica", sans-serif;
   --biggest-font-size: 6rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
@@ -76,8 +76,19 @@ img {
   padding-block: 2rem;
 }
 
-.main {
-  overflow: hidden;
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -88,7 +99,7 @@ img {
   left: 0;
   background-color: transparent;
   z-index: 11;
-  transition: background-color .3s, box-shadow .3s;
+  transition: box-shadow .4s;
 }
 
 .nav {
@@ -104,64 +115,76 @@ img {
   font-weight: var(--font-semi-bold);
 }
 
-.nav__close,
 .nav__toggle,
-.nav__actions {
+.nav__close {
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
   cursor: pointer;
-}
-
-.nav__actions {
-  column-gap: .5rem;
 }
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
-    top: 0;
-    right: -100%;
-    background-color: var(--first-color);
-    width: 80%;
-    height: 100%;
-    box-shadow: -2px 0 12px hsla(0, 0%, 0%, .2);
-    padding: 6rem 3rem 0;
-    transition: right .4s;
+    top: -100%;
+    left: 0;
+    background-color: hsla(5, 90%, 4%, .3);
+    backdrop-filter: blur(16px);
+    width: 100%;
+    padding-block: 4.5rem 3.5rem;
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+    transition: top .4s;
   }
 }
 
 .nav__list {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
+  row-gap: 2rem;
 }
 
 .nav__link {
-  color: var(--light-color);
-  font-weight: var(--font-semi-bold);
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--second-font);
 }
 
-.nav__link:hover {
-  text-decoration: underline;
+.nav__link::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: var(--first-color);
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  transition: width .3s;
+}
+
+.nav__link:hover::after {
+  width: 60%;
 }
 
 .nav__close {
   position: absolute;
-  top: 1.15rem;
+  top: 1rem;
   right: 1.5rem;
 }
 
 
 /* Show menu */
 .show-menu {
-  right: 0;
+  top: 0;
 }
 
-/* Background header */
-.bg-header {
-  background-color: var(--first-color);
-  box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+/* Add shadow header */
+.shadow-header {
+  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .1);
+}
+/* Active link */
+.active-link::after {
+  width: 60%;
 }
 
 /*=============== HOME ===============*/

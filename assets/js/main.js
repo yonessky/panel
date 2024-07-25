@@ -17,15 +17,26 @@ if (navClose) {
   });
 }
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll(".nav__link");
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]')
 
-const linkAction = () => {
-  const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu
-  navMenu.classList.remove("show-menu");
-};
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+const scrollActive = () => {
+  const scrollDown = window.scrollY
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight,
+          sectionTop = current.offsetTop - 58,
+          sectionId = current.getAttribute('id'),
+          sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+          // If section top is less than the position it adds class 'active'
+          if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+            sectionsClass.classList.add('active-link')
+          } else {
+            sectionsClass.classList.remove('active-link')
+          }
+    })
+}
+window.addEventListener('scroll', scrollActive)
 
 /*=============== SWIPER JANGAN MENCURI===============*/
 let swiperHome = new Swiper(".home__swiper", {
@@ -50,15 +61,15 @@ let swiperHome = new Swiper(".home__swiper", {
   },
 });
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-const bgHeader = () => {
-  const header = document.getElementById("header");
-  // Add a class if the bottom offset is greater than 50 ot the
+/*=============== ADD SHADOW HEADER ===============*/
+const shadowHeader = () => {
+  const header = document.getElementById('header')
+  // When the scroll is greater than 50 viewport height, add the scroll-header class to the
   this.scrollY >= 50
-    ? header.classList.add("bg-header")
-    : header.classList.remove("bg-header");
-};
-window.addEventListener("scroll", bgHeader);
+    ? header.classList.add('shadow-header')
+    : header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll', shadowHeader)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
