@@ -123,96 +123,6 @@ img {
   cursor: pointer;
 }
 
-/* Navigation for mobile devices */
-@media screen and (max-width: 1150px) {
-  .nav__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    background-color: hsla(5, 90%, 4%, .3);
-    backdrop-filter: blur(16px);
-    width: 100%;
-    padding-block: 4.5rem 3.5rem;
-    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-    transition: top .4s;
-  }
-  .delivery__container {
-    grid-template-columns: 440px 550px;
-    column-gap: 4rem;
-    align-items: center;
-    padding-block: 1rem;
-  }
-  .delivery__container .section__title,
-  .delivery__data {
-    text-align: initial;
-  }
-  .delivery__description {
-    margin-bottom: 3.5rem;
-  }
-  .delivery__sticker {
-    width: 50px;
-    right: 8rem;
-    bottom: 0;
-  }
-  .delivery__img {
-    width: 550px;
-  }
-  .contact {
-    max-width: initial;
-  }
-  .contact__container {
-    border-radius: 4rem;
-    padding-block: 4rem 6.5rem;
-  }
-  .contact__content {
-    /* grid-template-columns: 420px 435px; */
-    justify-content: center;
-    /* column-gap: 6.5rem; */
-  }
-  .contact__data {
-    /* grid-template-columns: repeat(2, max-content); */
-    text-align: initial;
-    gap: 4.5rem 2rem;
-    /* order: 1; */
-  }
-  .contact__social {
-    justify-content: initial
-  }
-  .contact__title {
-    margin-bottom: 1rem;
-  }
-  .contact__image {
-    position: relative;
-    width: 100%;
-  }
-  .contact__img {
-    width: 420px;
-    position: absolute;
-    top: -2.5rem;
-  }
-  .contact__sticker-1 {
-    width: 70px;
-    left: 27rem;
-    top: 10rem;
-  }
-  .contact__sticker-2 {
-    width: 40px;
-    right: 10rem;
-    bottom: 5.5rem;
-  }
-  .footer {
-    padding-block: 5rem 3rem;
-  }
-  .footer__container {
-    row-gap: 3.5rem;
-  }
-  .footer__copy {
-    margin-top: 4rem;
-  }
-  .scrollup {
-    right: 3rem;
-  }
-}
 
 .nav__list {
   text-align: center;
@@ -499,33 +409,6 @@ img {
   transform: rotateX(0);
 }
 
-/*=============== DELIVERY ===============*/
-.delivery__container {
-  row-gap: 2.5rem;
-}
-.delivery__data {
-  position: relative;
-  text-align: center;
-}
-.delivery__container .section__title {
-  margin-bottom: 1rem;
-}
-.delivery__description {
-  margin-bottom: 2rem;
-}
-.delivery__sticker {
-  width: 30px;
-  rotate: 15deg;
-  position: absolute;
-  right: 1rem;
-  bottom: 1.5rem;
-  opacity: .5;
-}
-.delivery__img {
-  width: 320px;
-  justify-self: center;
-  filter: var(--shadow-big-img);
-}
 
 /*=============== CONTACT ===============*/
 .contact__container {
@@ -668,10 +551,6 @@ img {
   .modal__card {
     padding: 1rem;
   }
-  .delivery__container {
-    grid-template-columns: 360px;
-    justify-content: center;
-  }
   .contact {
     max-width: 500px;
     margin: 0 auto;
@@ -708,6 +587,90 @@ img {
 
   .swiper-slide-active :is(.home__product, .home__price) {
     opacity: 1;
+  }
+  .footer__social {
+    grid-column: initial;
+  }
+  .footer__content {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+  .footer__link:nth-child(1){
+    justify-self: start;
+  }
+  .footer__link:nth-child(2){
+    order: 2;
+    justify-self: end;
+  }
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: hsla(5, 90%, 4%, .3);
+    backdrop-filter: blur(16px);
+    width: 100%;
+    padding-block: 4.5rem 3.5rem;
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+    transition: top .4s;
+  }
+  .contact {
+    max-width: initial;
+  }
+  .contact__container {
+    border-radius: 4rem;
+    padding-block: 4rem 6.5rem;
+  }
+  .contact__content {
+    /* grid-template-columns: 420px 435px; */
+    justify-content: center;
+    /* column-gap: 6.5rem; */
+  }
+  .contact__data {
+    /* grid-template-columns: repeat(2, max-content); */
+    text-align: initial;
+    gap: 4.5rem 2rem;
+    /* order: 1; */
+  }
+  .contact__social {
+    justify-content: initial
+  }
+  .contact__title {
+    margin-bottom: 1rem;
+  }
+  .contact__image {
+    position: relative;
+    width: 100%;
+  }
+  .contact__img {
+    width: 420px;
+    position: absolute;
+    top: -2.5rem;
+  }
+  .contact__sticker-1 {
+    width: 70px;
+    left: 27rem;
+    top: 10rem;
+  }
+  .contact__sticker-2 {
+    width: 40px;
+    right: 10rem;
+    bottom: 5.5rem;
+  }
+  .footer {
+    padding-block: 5rem 3rem;
+  }
+  .footer__container {
+    row-gap: 3.5rem;
+  }
+  .footer__copy {
+    margin-top: 4rem;
+  }
+  .scrollup {
+    right: 3rem;
   }
 }
 
