@@ -101,6 +101,7 @@ img {
   background-color: transparent;
   z-index: 11;
   transition: box-shadow .4s;
+  background-color: hsla(5, 90%, 4%, .3);
 }
 
 .nav {
@@ -124,6 +125,20 @@ img {
   cursor: pointer;
 }
 
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: hsla(5, 90%, 4%, .3);
+    backdrop-filter: blur(16px);
+    width: 100%;
+    padding-block: 4.5rem 3.5rem;
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+    transition: top .4s;
+  }
+}
 
 .nav__list {
   text-align: center;
@@ -147,6 +162,7 @@ img {
   left: 0;
   bottom: -.5rem;
   transition: width .3s;
+  
 }
 
 .nav__link:hover::after {
@@ -532,9 +548,9 @@ img {
   position: fixed;
   right: 1rem;
   bottom: -50%;
-  background-color: var(--body-color);
   box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-  color: var(--title-color);
+  color: var(--first-color);
+  background-color: var(--light-color);
   display: inline-flex;
   padding: 6px;
   font-size: 1.25rem;
@@ -676,25 +692,18 @@ img {
   }
 }
 
-/* Navigation for mobile devices */
-@media screen and (max-width: 1150px) {
-  .nav__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    background-color: hsla(5, 90%, 4%, .3);
-    backdrop-filter: blur(16px);
-    width: 100%;
-    padding-block: 4.5rem 3.5rem;
-    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-    transition: top .4s;
-  }
-}
 
 /* For large devices */
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 7rem 2rem;
+  }
+  .section__title {
+    margin-bottom: 4.5rem;
   }
 
   .nav {
@@ -807,7 +816,7 @@ img {
     padding-block: 4rem 6.5rem;
   }
   .contact__content {
-    grid-template-columns: 420px 435px;
+    grid-template-columns: 420px 580px;
     justify-content: center;
     column-gap: 6.5rem;
   }
@@ -853,6 +862,8 @@ img {
   }
   .scrollup {
     right: 3rem;
+    color: var(--first-color);
+    background-color: var(--light-color);
   }
 
 }
