@@ -1,3 +1,32 @@
+/*=============== SHOW MENU ===============*/
+const navMenu = document.getElementById("nav-menu"),
+  navToggle = document.getElementById("nav-toggle"),
+  navClose = document.getElementById("nav-close");
+
+// Menu Show
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
+
+// Menu Hidden
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll('.nav__link')
+
+const linkAction = () => {
+  const navMenu = document.getElementById('nav-menu')
+  // When we click on each nav__link, we remove the show-menu class
+  navMenu.classList.remove('show-menu')
+}
+navLink.forEach((n) => n.addEventListener('click', linkAction))
+
 /*=============== ADD SHADOW HEADER ===============*/
 const shadowHeader = () => {
   const header = document.getElementById('header')
@@ -115,54 +144,4 @@ modalCard.forEach((modalCard) => {
   modalCard.addEventListener("click", (e) => {
     e.stopPropagation();
   });
-});
-
-
-/*===================== NAV-BAR-MOBILE ==================*/
-
-const body = document.body;
-const bgColorsBody = ["#ffb457"];
-const menu = body.querySelector(".nav__list");
-const menuItems = menu.querySelectorAll(".nav__link");
-const menuBorder = menu.querySelector(".nav__border");
-let activeItem = menu.querySelector(".active-link");
-
-function clickItem(item, index) {
-
-    menu.style.removeProperty("--timeOut");
-    
-    if (activeItem == item) return;
-    
-    if (activeItem) {
-        activeItem.classList.remove("active");
-    }
-
-    
-    item.classList.add("active");
-    body.style.backgroundColor = bgColorsBody[index];
-    activeItem = item;
-    offsetMenuBorder(activeItem, menuBorder);
-    
-    
-}
-
-function offsetMenuBorder(element, menuBorder) {
-
-    const offsetActiveItem = element.getBoundingClientRect();
-    const left = Math.floor(offsetActiveItem.left - menu.offsetLeft - (menuBorder.offsetWidth  - offsetActiveItem.width) / 2) +  "px";
-    menuBorder.style.transform = `translate3d(${left}, 0 , 0)`;
-
-}
-
-offsetMenuBorder(activeItem, menuBorder);
-
-menuItems.forEach((item, index) => {
-
-    item.addEventListener("click", () => clickItem(item, index));
-    
-})
-
-window.addEventListener("resize", () => {
-    offsetMenuBorder(activeItem, menuBorder);
-    menu.style.setProperty("--timeOut", "none");
 });
