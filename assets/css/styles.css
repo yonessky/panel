@@ -826,6 +826,10 @@ img {
     width: 60%;
     background-color: wheat;
   }
+  
+  .nav__link::before {
+    display: none;
+  }
 
   .home__container {
     height: initial;
