@@ -156,7 +156,7 @@ img {
 .nav__link {
   all: unset;
   flex-grow: 1;
-  z-index: 100;
+  /* z-index: 100; */
   display: flex;
   cursor: pointer;
   position: relative;
@@ -165,6 +165,7 @@ img {
   will-change: transform;
   justify-content: center;
   padding: 0.55em 0 0.85em;
+  outline: 1px solid wheat;
   transition: transform var(--timeOut, var(--duration));
 }
 
@@ -221,12 +222,12 @@ img {
 }
 
 .nav__border {
-  left: 0;
+  /* left: 0; */
   bottom: 99%;
   width: 10.9em;
   height: 2.4em;
   position: absolute;
-  clip-path: url(#menu);
+  clip-path: url(#nav__list);
   will-change: transform;
   background-color: var(--bgColorMenu);
   transition: transform var(--timeOut, var(--duration));
@@ -611,30 +612,7 @@ img {
   margin-top: 3.5rem;
 }
 
-/*=============== SCROLL UP ===============*/
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -50%;
-  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
-  color: var(--first-color);
-  background-color: var(--light-color);
-  display: inline-flex;
-  padding: 6px;
-  font-size: 1.25rem;
-  border-radius: .35rem;
-  z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s;
-}
 
-.scrollup:hover {
-  transform: translateY(-.5rem);
-}
-
-/* Show Scroll Up */
-.show-scroll {
-  bottom: 3rem;
-}
 
 
 /*=============== BREAKPOINTS ===============*/
@@ -821,12 +799,22 @@ img {
     width: 60%;
   }
 
+  /* Show menu */
+  .show-menu {
+    top: 0;
+  }
+
+  /* Add shadow header */
+  .shadow-header {
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .1);
+  }
+
   /* Active link */
   .active-link::after {
     width: 60%;
     background-color: wheat;
   }
-  
+
   .nav__link::before {
     display: none;
   }
@@ -975,12 +963,30 @@ img {
     margin-top: 4rem;
   }
 
+  /*=============== SCROLL UP ===============*/
   .scrollup {
+    position: fixed;
     right: 3rem;
+    bottom: -50%;
+    box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
     color: var(--first-color);
     background-color: var(--light-color);
+    display: inline-flex;
+    padding: 6px;
+    font-size: 1.25rem;
+    border-radius: .35rem;
+    z-index: var(--z-tooltip);
+    transition: bottom .4s, transform .4s;
   }
 
+  .scrollup:hover {
+    transform: translateY(-.5rem);
+  }
+
+  /* Show Scroll Up */
+  .show-scroll {
+    bottom: 3rem;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -990,5 +996,9 @@ img {
 
   .nav__link h1 {
     display: none;
+  }
+
+  .header {
+    top: 100%;
   }
 }
