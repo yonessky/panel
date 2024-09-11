@@ -122,7 +122,7 @@ modalCard.forEach((modalCard) => {
 
 const body = document.body;
 const bgColorsBody = ["#ffb457"];
-const menu = body.querySelector(".nav__list");
+const menu = body.querySelector(".menu");
 const menuItems = menu.querySelectorAll(".nav__link");
 const menuBorder = menu.querySelector(".nav__border");
 let activeItem = menu.querySelector(".active-link");
@@ -134,11 +134,11 @@ function clickItem(item, index) {
     if (activeItem == item) return;
     
     if (activeItem) {
-        activeItem.classList.remove("active");
+        activeItem.classList.remove("active-link");
     }
 
     
-    item.classList.add("active");
+    item.classList.add("active-link");
     body.style.backgroundColor = bgColorsBody[index];
     activeItem = item;
     offsetMenuBorder(activeItem, menuBorder);

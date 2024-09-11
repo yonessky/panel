@@ -122,31 +122,26 @@ img {
 /* Navigation for mobile devices */
 @media screen and (max-width: 1023px) {
   .nav__menu {
+    /* outline: 1px solid wheat; */
     position: fixed;
     bottom: 0;
     left: 0;
-    /* margin: 0; */
-    display: flex;
-    width: 100%;
-    font-size: 1.5em;
-    /* position: relative; */
+    right: 0;
     align-items: center;
     justify-content: center;
     background-color: var(--bgColorMenu);
     backdrop-filter: blur(16px);
-    /* padding-block: 4.5rem 3.5rem; */
     box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
     transition: top .4s;
-    font-size: .8em;
   }
 }
 
-.nav__list {
+.menu{
+  /* outline: 1px solid wheat; */
   margin: 0;
   display: flex;
   width: 100%;
-  font-size: 1.5em;
-  padding: 0. 2.85em;
+  font-size: 1.2em;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -156,16 +151,17 @@ img {
 .nav__link {
   all: unset;
   flex-grow: 1;
-  /* z-index: 100; */
+  z-index: 100;
   display: flex;
+  margin: .45em .55em 0 .55em;
+  padding: .55em .55em .85em .55em;
   cursor: pointer;
   position: relative;
   border-radius: 50%;
   align-items: center;
   will-change: transform;
   justify-content: center;
-  padding: 0.55em 0 0.85em;
-  outline: 1px solid wheat;
+  /* outline: 1px solid wheat; */
   transition: transform var(--timeOut, var(--duration));
 }
 
@@ -176,7 +172,7 @@ img {
   height: 4.2em;
   border-radius: 50%;
   position: absolute;
-  transition: scale(0);
+  transform: scale(0);
   transition: background-color var(--duration), transform var(--duration);
 }
 
@@ -222,12 +218,12 @@ img {
 }
 
 .nav__border {
-  /* left: 0; */
+  left: 0;
   bottom: 99%;
-  width: 10.9em;
-  height: 2.4em;
+  width: 9.4em;
+  height: 1.8em;
   position: absolute;
-  clip-path: url(#nav__list);
+  clip-path: url(#menu);
   will-change: transform;
   background-color: var(--bgColorMenu);
   transition: transform var(--timeOut, var(--duration));
@@ -768,7 +764,7 @@ img {
     width: 100%;
   }
 
-  .nav__list {
+  .menu {
     flex-direction: row;
     justify-content: center;
     column-gap: 4rem;
