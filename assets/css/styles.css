@@ -815,6 +815,10 @@ img {
     display: none;
   }
 
+  .nav__border {
+    display: none;
+  }
+
   .home__container {
     height: initial;
     padding-top: 10rem;
