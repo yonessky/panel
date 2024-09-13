@@ -28,7 +28,7 @@ const scrollActive = () => {
     const sectionHeight = current.offsetHeight,
           sectionTop = current.offsetTop - 58,
           sectionId = current.getAttribute('id'),
-          sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+          sectionsClass = document.querySelector('.menu a[href*=' + sectionId + ']')
           // If section top is less than the position it adds class 'active'
           if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
             sectionsClass.classList.add('active-link')
@@ -38,6 +38,7 @@ const scrollActive = () => {
     })
 }
 window.addEventListener('scroll', scrollActive)
+
 
 /*=============== SWIPER JANGAN MENCURI===============*/
 let swiperHome = new Swiper(".home__swiper", {
@@ -121,7 +122,7 @@ modalCard.forEach((modalCard) => {
 /*===================== NAV-BAR-MOBILE ==================*/
 
 const body = document.body;
-const bgColorsBody = ["#ffb457"];
+const bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
 const menu = body.querySelector(".menu");
 const menuItems = menu.querySelectorAll(".nav__link");
 const menuBorder = menu.querySelector(".nav__border");

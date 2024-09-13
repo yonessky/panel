@@ -145,7 +145,7 @@ img {
   position: relative;
   align-items: center;
   justify-content: center;
-  /* background-color: var(--bgColorMenu); */
+  background-color: var(--bgColorMenu);
 }
 
 .nav__link {
@@ -169,7 +169,7 @@ img {
   content: "";
   z-index: -1;
   width: 4.2em;
-  height: 4.2em;
+  height: 4.2em;33333
   border-radius: 50%;
   position: absolute;
   transform: scale(0);
@@ -182,14 +182,8 @@ img {
 
 .nav__link.active-link::before {
   transform: scale(1);
-  background-color: var(--bgColorMenu);
+  background-color: var(--bgColorItem);
 }
-
-/* .nav__link {
-  position: relative;
-  color: var(--title-color);
-  font-family: var(--second-font);
-} */
 
 .icon {
   width: 2.6em;
