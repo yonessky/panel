@@ -122,7 +122,7 @@ modalCard.forEach((modalCard) => {
 /*===================== NAV-BAR-MOBILE ==================*/
 
 const body = document.body;
-const bgColorsBody = ["#ffb457", "#ff96bd", "#9999fb", "#ffe797", "#cffff1"];
+const bgColorsBody = ["#ffb457"];
 const menu = body.querySelector(".menu");
 const menuItems = menu.querySelectorAll(".nav__link");
 const menuBorder = menu.querySelector(".nav__border");

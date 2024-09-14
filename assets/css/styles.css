@@ -153,8 +153,8 @@ img {
   flex-grow: 1;
   z-index: 100;
   display: flex;
-  margin: .45em .55em 0 .55em;
-  padding: .55em .55em .85em .55em;
+  margin: .15em .55em 0 .55em;
+  padding: .35em .55em .85em .55em;
   cursor: pointer;
   position: relative;
   border-radius: 50%;
@@ -168,8 +168,8 @@ img {
 .nav__link::before {
   content: "";
   z-index: -1;
-  width: 4.2em;
-  height: 4.2em;33333
+  width: 3.5em;
+  height: 3.5em;
   border-radius: 50%;
   position: absolute;
   transform: scale(0);
@@ -762,6 +762,7 @@ img {
     flex-direction: row;
     justify-content: center;
     column-gap: 4rem;
+    background-color: var(--normal-font-size);
   }
 
   .icon {
