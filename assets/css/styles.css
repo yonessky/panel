@@ -7,8 +7,8 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(34, 52%, 54%);
-  /* --first-color: hsl(200, 89%, 18%); */
+  /* --first-color: hsl(34, 52%, 54%); */
+  --first-color: #053c57;
   --first-color-light: hsl(60, 100%, 88%);
   --first-color-lighten: hsl(33, 79.6%, 73.1%);
   --second-color: hsl(200, 86%, 28%);
