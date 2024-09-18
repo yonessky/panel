@@ -168,8 +168,8 @@ img {
 .nav__link::before {
   content: "";
   z-index: -1;
-  width: 3.5em;
-  height: 3.5em;
+  width: 3.3em;
+  height: 3.3em;
   border-radius: 50%;
   position: absolute;
   transform: scale(0);
@@ -186,8 +186,8 @@ img {
 }
 
 .icon {
-  width: 2.6em;
-  height: 2.6em;
+  width: 2.3em;
+  height: 2.3em;
   stroke: white;
   fill: transparent;
   stroke-width: 1pt;
@@ -687,7 +687,12 @@ img {
 /* For medium devices */
 @media screen and (min-width: 768px) {
   .nav__menu {
-    width: 50%;
+    left: 15%;
+    right: 30%;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid wheat;
   }
 
   .home__article {
