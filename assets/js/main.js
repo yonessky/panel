@@ -167,3 +167,9 @@ window.addEventListener("resize", () => {
     offsetMenuBorder(activeItem, menuBorder);
     menu.style.setProperty("--timeOut", "none");
 });
+
+/*==========   counterUp  ==========*/
+$(".counter").counterUp({
+  delay: 10,
+  time: 4000,
+});
