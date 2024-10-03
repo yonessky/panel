@@ -464,6 +464,36 @@ img {
   transform: rotateX(0);
 }
 
+/*=============== ABOUT ===============*/
+
+.about {
+  margin-bottom: -2rem;
+  
+}
+
+.about__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about__description {
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  text-align: justify;
+}
+
+.about__lead {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about__lead span {
+  color: var(--shadow-bright);
+}
+
 
 /*=============== CONTACT ===============*/
 .contact__container {
@@ -682,6 +712,9 @@ img {
     max-width: 500px;
     margin: 0 auto;
   }
+  .about__lead {
+    max-width: 100%;
+  }
 }
 
 /* For medium devices */
@@ -896,6 +929,11 @@ img {
 
   ::-webkit-scrollbar-thumb {
     background-color: hsl(0, 0%, 65%);
+  }
+
+  .about__lead {
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 
   .contact {
