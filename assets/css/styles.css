@@ -477,6 +477,13 @@ img {
   flex-wrap: wrap;
 }
 
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+  text-align: center;
+}
+
 .about__description {
   color: var(--title-color);
   font-size: var(--normal-font-size);
@@ -485,13 +492,48 @@ img {
   text-align: justify;
 }
 
-.about__lead {
+.about .counter__container .counter-item {
+  margin-left: 30px;
+}
+
+.about__lead,
+.counter__container {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
 .about__lead span {
   color: var(--shadow-bright);
+}
+
+/*---------------------------
+    Counters
+--------------------------*/
+.counter__container {
+  display: flex;
+  align-items: center;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.counter-item {
+  justify-content: center;
+  flex: 1 0 0%;
+  margin-right: .50rem;
+}
+
+.counter__description {
+  margin-bottom: 1.5rem;
+  font-size: var(--small-font-size);
+}
+
+.counter-item .counter {
+  color: var(--first-color);
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: var(--number-font);
 }
 
 
@@ -668,6 +710,20 @@ img {
   .modal {
     padding-inline: 1rem;
   }
+
+  .counter-item .counter {
+    font-size: 25px;
+  }
+
+  .counter-item .counter__description {
+    font-size: var(--small-font-size);
+    line-height: 20px;
+    padding-right: 0;
+  }
+
+  .counter__container {
+    display: grid;
+  }
 }
 
 /* For medium devices */
@@ -699,6 +755,15 @@ img {
   .modal {
     padding: 1rem;
     height: initial;
+  }
+  .counter-item .counter {
+    font-size: 25px;
+  }
+  .counter-item .counter__description {
+    font-size: 11px;
+    line-height: 20px;
+    padding-right: 0;
+    max-width: 100%;
   }
 }
 
@@ -934,6 +999,24 @@ img {
   .about__lead {
     flex: 0 0 50%;
     max-width: 50%;
+  }
+
+  .about .counter__container .counter-item {
+    margin-left: 30px;
+  }
+
+  .counter-item .counter {
+    color: var(--first-color);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .counter-item .counter__description {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding-right: 40px;
   }
 
   .contact {
