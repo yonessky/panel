@@ -21,6 +21,8 @@
   --body-font: "Montserrat", sans-serif;
   --second-font: "Aclonica", sans-serif;
   --biggest-font-size: 6rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
@@ -92,6 +94,21 @@ img {
   text-align: center;
   font-size: var(--h1-font-size);
   margin-bottom: 2rem;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.section__title span {
+  color: var(--second-color);
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -628,6 +645,23 @@ img {
   transition: all .25s ease;
 }
 
+/*Rotate icon and add shadows*/
+.accordion-open {
+  box-shadow: 0 12px 32px hsla(228, 66%, 45%, .1);
+}
+
+.accordion-open .value__accordion-icon {
+  box-shadow: 0 4px 4px hsla(228, 66%, 45%, .1);
+}
+
+.accordion-open .value__accordion-arrow {
+  box-shadow: 0 2px 4px hsla(228, 66%, 45%, .1);
+}
+
+.accordion-open .value__accordion-arrow i {
+  transform: rotate(-180deg);
+}
+
 
 /*=============== CONTACT ===============*/
 .contact__container {
@@ -771,7 +805,7 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 320px) {
   .container {
     margin-inline: 3rem;
   }
@@ -815,6 +849,14 @@ img {
 
   .counter__container {
     display: grid;
+  }
+  .value__orbe {
+    width: 236px;
+    height: 280px;
+  }
+  .value__img {
+    width: 228px;
+    height: 260px;
   }
 }
 
@@ -942,6 +984,7 @@ img {
   }
 
   .section__title {
+    font-size: 2.25rem;
     margin-bottom: 4.5rem;
   }
 
@@ -1095,6 +1138,43 @@ img {
 
   .about .counter__container .counter-item {
     margin-left: 30px;
+  }
+
+  .value__orbe {
+    width: 501px;
+    height: 641px;
+    border-radius: 258px 258px 16px 16px;
+  }
+
+  .value__img {
+    width: 461px;
+    height: 601px;
+    border-radius: 238px 238px 12px 12px;
+  }
+
+  .value__img img {
+    max-width: initial;
+    width: 490px;
+  }
+
+  .section__subtitle {
+    font-size: var(--normal-font-size);
+  }
+
+  .value__description {
+    font-size: var(--normal-font-size);
+    margin-bottom: 2.5rem;
+  }
+
+  .value__accordion-title {
+    font-size: var(--normal-font-size);
+  }
+  .value__accordion-item {
+    padding: 1.25rem 1.25rem 1.25rem 1rem;
+  }
+  .value__accordion-description {
+    padding-bottom: 1rem;
+    font-size: var(--small-font-size);
   }
 
   .counter-item .counter {
