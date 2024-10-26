@@ -99,7 +99,7 @@ img {
 .section__subtitle {
   display: block;
   font-size: var(--small-font-size);
-  color: var(--second-color);
+  color: hsl(25, 83%, 53%);
 }
 
 .section__title {
@@ -107,9 +107,9 @@ img {
   margin-bottom: 1rem;
 }
 
-.section__title span {
+/* .section__title span {
   color: var(--second-color);
-}
+} */
 
 /*=============== HEADER & NAV ===============*/
 .header {
@@ -485,20 +485,12 @@ img {
 
 .about {
   margin-bottom: -2rem;
-  
 }
 
 .about__container {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  color: var(--second-color);
-  text-align: center;
 }
 
 .about__description {
