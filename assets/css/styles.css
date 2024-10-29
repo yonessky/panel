@@ -576,6 +576,7 @@ img {
 
 .value__description {
   font-size: var(--small-font-size);
+  line-height: 17px;
   margin-bottom: 2rem;
 }
 
@@ -1155,6 +1156,7 @@ img {
 
   .value__description {
     font-size: var(--normal-font-size);
+    line-height: 20px;
     margin-bottom: 2.5rem;
   }
 
