@@ -102,15 +102,6 @@ img {
   color: hsl(25, 83%, 53%);
 }
 
-.section__title {
-  font-size: var(--h2-font-size);
-  margin-bottom: 1rem;
-}
-
-/* .section__title span {
-  color: var(--second-color);
-} */
-
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
@@ -575,8 +566,8 @@ img {
 }
 
 .value__description {
-  font-size: var(--small-font-size);
-  line-height: 17px;
+  font-size: var(--normal-font-size);
+  line-height: 18px;
   margin-bottom: 2rem;
 }
 
@@ -628,11 +619,13 @@ img {
 }
 
 .value__accordion-description {
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   padding: 1.25rem 2.5rem 0 2.75rem;
+  line-height: 17px;
 }
 
 .value__accordion-content {
+  font-size: var(--normal-font-size);
   overflow: hidden;
   height: 0;
   transition: all .25s ease;
@@ -946,6 +939,12 @@ img {
     opacity: 1;
   }
 
+  .value__container,
+  .contact__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
   .footer__social {
     grid-column: initial;
   }
@@ -1170,8 +1169,12 @@ img {
     padding-bottom: 1rem;
     font-size: var(--small-font-size);
   }
-
-  .counter-item .counter {
+  .value__container,
+  .contact__container {
+    align-items: flex-start;
+    column-gap: 5rem;
+  }
+  .counter-item .counter { 
     color: var(--first-color);
     font-size: 60px;
     font-weight: 600;
