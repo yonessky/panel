@@ -91,7 +91,7 @@ img {
 }
 
 .section__title {
-  text-align: center;
+  text-align: left;
   font-size: var(--h1-font-size);
   margin-bottom: 2rem;
 }
@@ -566,6 +566,7 @@ img {
 }
 
 .value__description {
+  text-align: justify;
   font-size: var(--normal-font-size);
   line-height: 18px;
   margin-bottom: 2rem;
@@ -578,7 +579,7 @@ img {
 
 .value__accordion-item {
   /* background-color: var(--body-color); */
-  border: 1px solid white;
+  border: 1px solid hsl(0, 3%, 59%);
   border-radius: .5rem;
   padding: 1rem .75rem;
 }
@@ -619,6 +620,7 @@ img {
 }
 
 .value__accordion-description {
+  text-align: justify;
   font-size: var(--small-font-size);
   padding: 1.25rem 2.5rem 0 2.75rem;
   line-height: 17px;
