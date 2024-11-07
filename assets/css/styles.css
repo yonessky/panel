@@ -472,70 +472,6 @@ img {
   transform: rotateX(0);
 }
 
-/*=============== ABOUT ===============*/
-
-.about {
-  margin-bottom: -2rem;
-}
-
-.about__container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.about__description {
-  color: var(--title-color);
-  font-size: var(--normal-font-size);
-  margin-bottom: 2rem;
-  margin-right: 1rem;
-  text-align: justify;
-}
-
-.about .counter__container .counter-item {
-  margin-left: 30px;
-}
-
-.about__lead,
-.counter__container {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.about__lead span {
-  color: var(--shadow-bright);
-}
-
-/*---------------------------
-    Counters
---------------------------*/
-.counter__container {
-  display: flex;
-  align-items: center;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.counter-item {
-  justify-content: center;
-  flex: 1 0 0%;
-  margin-right: .50rem;
-}
-
-.counter__description {
-  margin-bottom: 1.5rem;
-  font-size: var(--small-font-size);
-}
-
-.counter-item .counter {
-  color: var(--first-color);
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 20px;
-  font-family: var(--number-font);
-}
-
 /*=============== VALUE ===============*/
 .value__container {
   row-gap: 3rem;
@@ -548,9 +484,9 @@ img {
 }
 
 .value__orbe {
-  width: 266px;
+  /* width: 266px; */
   height: 316px;
-  background-color: hsl(228, 24%, 97%);
+  /* background-color: hsl(228, 24%, 97%); */
   border-radius: 135px 135px 16px 16px;
 }
 
@@ -825,19 +761,6 @@ img {
     padding-inline: 1rem;
   }
 
-  .counter-item .counter {
-    font-size: 25px;
-  }
-
-  .counter-item .counter__description {
-    font-size: var(--small-font-size);
-    line-height: 20px;
-    padding-right: 0;
-  }
-
-  .counter__container {
-    display: grid;
-  }
   .value__orbe {
     width: 236px;
     height: 280px;
@@ -878,15 +801,6 @@ img {
     padding: 1rem;
     height: initial;
   }
-  .counter-item .counter {
-    font-size: 25px;
-  }
-  .counter-item .counter__description {
-    font-size: 11px;
-    line-height: 20px;
-    padding-right: 0;
-    max-width: 100%;
-  }
 }
 
 /* For medium devices */
@@ -898,9 +812,6 @@ img {
   .contact {
     max-width: 500px;
     margin: 0 auto;
-  }
-  .about__lead {
-    max-width: 100%;
   }
 }
 
@@ -1125,15 +1036,6 @@ img {
     background-color: hsl(0, 0%, 65%);
   }
 
-  .about__lead {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .about .counter__container .counter-item {
-    margin-left: 30px;
-  }
-
   .value__orbe {
     width: 501px;
     height: 641px;
@@ -1175,19 +1077,6 @@ img {
   .contact__container {
     align-items: flex-start;
     column-gap: 5rem;
-  }
-  .counter-item .counter { 
-    color: var(--first-color);
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 1;
-    margin-bottom: 20px;
-  }
-  .counter-item .counter__description {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 0;
-    padding-right: 40px;
   }
 
   .contact {
