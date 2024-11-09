@@ -253,8 +253,9 @@ img {
 
 /*=============== HOME ===============*/
 .home__container {
+  outline: 1px solid yellow;
   height: initial;
-  padding-block: 9rem 2rem;
+  padding-block: 2rem 2rem;
   display: grid;
   align-items: center;
   row-gap: 6rem;
@@ -472,61 +473,64 @@ img {
   transform: rotateX(0);
 }
 
-/*=============== VALUE ===============*/
-.value__container {
+/*=============== ABOUT ===============*/
+.about__container {
+  margin-top: -20%;
   row-gap: 3rem;
+  outline: 1px solid yellow;
 }
 
-.value__images {
+.about__images {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.value__orbe {
+.about__orbe {
   /* width: 266px; */
   height: 316px;
   /* background-color: hsl(228, 24%, 97%); */
   border-radius: 135px 135px 16px 16px;
 }
      
-.value__img {
+.about__img {
   position: absolute;
+  top: 20%;
   width: 350px;
   height: 350px;
-  overflow:hidden;                                                                
+  overflow: hidden;    
   /* border-radius: 125px 125px 12px 12px; */
   /* inset: 0; */
   margin: auto;
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
-.value__description {
+.about__description {
   text-align: justify;
   font-size: var(--normal-font-size);
   line-height: 18px;
   margin-bottom: 2rem;
 }
 
-.value__accordion {
+.about__accordion {
   display: grid;
   row-gap: 1.5rem;
 }
 
-.value__accordion-item {
+.about__accordion-item {
   /* background-color: var(--body-color); */
   border: 1px solid hsl(0, 3%, 59%);
   border-radius: .5rem;
   padding: 1rem .75rem;
 }
 
-.value__accordion-header {
+.about__accordion-header {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.value__accordion-icon {
+.about__accordion-icon {
   /* background-color: var(--first-color-lighten); */
   padding: 5px;
   border-radius: .25rem;
@@ -536,11 +540,11 @@ img {
   transition: .3s;
 }
 
-.value__accordion-title {
+.about__accordion-title {
   font-size: var(--small-font-size);
 }
 
-.value__accordion-arrow {
+.about__accordion-arrow {
   display: inline-flex;
   /* background-color: var(--first-color-lighten); */
   padding: .25rem;
@@ -551,18 +555,18 @@ img {
   transition: .3s;
 }
 
-.value__accordion-arrow i {
+.about__accordion-arrow i {
   transition: .4s;
 }
 
-.value__accordion-description {
+.about__accordion-description {
   text-align: justify;
   font-size: var(--small-font-size);
   padding: 1.25rem 2.5rem 0 2.75rem;
   line-height: 17px;
 }
 
-.value__accordion-content {
+.about__accordion-content {
   font-size: var(--normal-font-size);
   overflow: hidden;
   height: 0;
@@ -574,15 +578,15 @@ img {
   box-shadow: 0 12px 32px hsla(228, 66%, 45%, .1);
 }
 
-.accordion-open .value__accordion-icon {
+.accordion-open .about__accordion-icon {
   box-shadow: 0 4px 4px hsla(228, 66%, 45%, .1);
 }
 
-.accordion-open .value__accordion-arrow {
+.accordion-open .about__accordion-arrow {
   box-shadow: 0 2px 4px hsla(228, 66%, 45%, .1);
 }
 
-.accordion-open .value__accordion-arrow i {
+.accordion-open .about__accordion-arrow i {
   transform: rotate(-180deg);
 }
 
@@ -761,11 +765,11 @@ img {
     padding-inline: 1rem;
   }
 
-  .value__orbe {
+  .about__orbe {
     width: 236px;
     height: 280px;
   }
-  .value__img {
+  .about__img {
     width: 228px;
     height: 260px;
   }
@@ -852,7 +856,7 @@ img {
     opacity: 1;
   }
 
-  .value__container,
+  .about__container,
   .contact__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -1036,19 +1040,19 @@ img {
     background-color: hsl(0, 0%, 65%);
   }
 
-  .value__orbe {
+  .about__orbe {
     width: 501px;
     height: 641px;
     border-radius: 258px 258px 16px 16px;
   }
 
-  .value__img {
+  .about__img {
     width: 461px;
     height: 601px;
     border-radius: 238px 238px 12px 12px;
   }
 
-  .value__img img {
+  .about__img img {
     max-width: initial;
     width: 490px;
   }
@@ -1057,23 +1061,23 @@ img {
     font-size: var(--normal-font-size);
   }
 
-  .value__description {
+  .about__description {
     font-size: var(--normal-font-size);
     line-height: 20px;
     margin-bottom: 2.5rem;
   }
 
-  .value__accordion-title {
+  .about__accordion-title {
     font-size: var(--normal-font-size);
   }
-  .value__accordion-item {
+  .about__accordion-item {
     padding: 1.25rem 1.25rem 1.25rem 1rem;
   }
-  .value__accordion-description {
+  .about__accordion-description {
     padding-bottom: 1rem;
     font-size: var(--small-font-size);
   }
-  .value__container,
+  .about__container,
   .contact__container {
     align-items: flex-start;
     column-gap: 5rem;
