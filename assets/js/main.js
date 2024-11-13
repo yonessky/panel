@@ -168,11 +168,11 @@ window.addEventListener("resize", () => {
     menu.style.setProperty("--timeOut", "none");
 });
 
-/*=============== VALUE ACCORDION ===============*/
-const accordionItems = document.querySelectorAll('.value__accordion-item')
+/*=============== ABOUT ACCORDION ===============*/
+const accordionItems = document.querySelectorAll('.about__accordion-item')
 
 accordionItems.forEach((item) =>{
-    const accordionHeader = item.querySelector('.value__accordion-header')
+    const accordionHeader = item.querySelector('.about__accordion-header')
 
     accordionHeader.addEventListener('click', () =>{
         const openItem = document.querySelector('.accordion-open')
@@ -186,7 +186,7 @@ accordionItems.forEach((item) =>{
 })
 
 const toggleItem =  (item) => {
-    const accordionContent = item.querySelector('.value__accordion-content')
+    const accordionContent = item.querySelector('.about__accordion-content')
     
     if(item.classList.contains('accordion-open')){
         accordionContent.removeAttribute('style')
