@@ -219,7 +219,7 @@ img {
 
 }
 
-.nav__border {
+/* .nav__border {
   left: 0;
   bottom: 99%;
   width: 9.4em;
@@ -229,7 +229,7 @@ img {
   will-change: transform;
   background-color: var(--bgColorMenu);
   transition: transform var(--timeOut, var(--duration));
-}
+} */
 
 .svg-container {
   width: 0;
