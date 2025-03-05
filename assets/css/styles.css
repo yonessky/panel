@@ -253,7 +253,7 @@ img {
 
 /*=============== HOME ===============*/
 .home__container {
-  outline: 1px solid yellow;
+  /* outline: 1px solid yellow; */
   height: initial;
   padding-block: 2rem 2rem;
   display: grid;
@@ -476,7 +476,7 @@ img {
 /*=============== ABOUT ===============*/
 .about__container {
   row-gap: 3rem;
-  outline: 1px solid yellow;
+  /* outline: 1px solid yellow; */
 }
 
 .about__images {
@@ -494,9 +494,9 @@ img {
      
 .about__img {
   position: absolute;
-  top: 20%;
-  width: 350px;
-  height: 350px;
+  top: 0%;
+  width: 330px;
+  height: 330px;
   overflow: hidden;    
   /* border-radius: 125px 125px 12px 12px; */
   /* inset: 0; */
