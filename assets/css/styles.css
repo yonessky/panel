@@ -501,7 +501,7 @@ img {
   /* border-radius: 125px 125px 12px 12px; */
   /* inset: 0; */
   margin: auto;
-  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+  filter: drop-shadow(0 16px 32px hsla(228, 66%, 25%, .25));
 }
 
 .about__description {
