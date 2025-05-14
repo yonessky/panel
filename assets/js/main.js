@@ -202,3 +202,140 @@ $(".counter").counterUp({
   delay: 10,
   time: 4000,
 });
+
+/*==========   Progress  ==========*/
+
+var gotop = function() {
+  if ($('div').hasClass('progress-wrap')) {
+  var progressPath = document.querySelector('.progress-wrap path');
+  var pathLength = progressPath.getTotalLength();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+  progressPath.getBoundingClientRect();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+  var updateprogress = function() {
+      var scroll = $(window).scrollTop();
+      var height = $(document).height() - $(window).height();
+      var progress = pathLength - (scroll * pathLength / height);
+      progressPath.style.strokeDashoffset = progress;
+  }
+  updateprogress();
+  $(window).scroll(updateprogress);
+  var offset = 150;
+  var duration = 550;
+  jQuery(window).on('scroll', function() {
+      if (jQuery(this).scrollTop() > offset) {
+          jQuery('.progress-wrap').addClass('active-progress');
+      } else {
+          jQuery('.progress-wrap').removeClass('active-progress');
+      }
+  });
+  jQuery('.progress-wrap').on('click', function(event) {
+      event.preventDefault();
+      jQuery('html, body').animate({ scrollTop: 0 }, duration);
+      return false;
+  })
+}}
+const cursor = function () {
+  var myCursor = jQuery(".tf-mouse");
+  if (myCursor.length) {
+    if ($("body")) {
+      const e = document.querySelector(".tf-mouse-inner"),
+        t = document.querySelector(".tf-mouse-outer");
+      let n,
+        i = 0,
+        o = !1;
+      (window.onmousemove = function (s) {
+        o ||
+          (t.style.transform =
+            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+          (e.style.transform =
+            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+          (n = s.clientY),
+          (i = s.clientX);
+      }),
+        $("body").on(
+          "mouseenter",
+          "a, .canvas, .progress-wrap, .wishlist-button",
+          function () {
+            e.classList.add("mouse-hover"), t.classList.add("mouse-hover");
+          }
+        ),
+        $("body").on(
+          "mouseleave",
+          "a, .canvas, .progress-wrap, .wishlist-button",
+          function () {
+            ($(this).is("a") && $(this).closest(".canvas").length) ||
+              (e.classList.remove("mouse-hover"),
+              t.classList.remove("mouse-hover"));
+          }
+        ),
+        (e.style.visibility = "visible"),
+        (t.style.visibility = "visible");
+    }
+  }
+};
+
+/* ==================================================
+            # Magnific popup init
+         ===============================================*/
+        $(".popup-link").magnificPopup({
+            type: 'image',
+            // other options
+        });
+
+        $(".popup-gallery").magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            },
+            // other options
+        });
+
+        $(".popup-video, .popup-vimeo, .popup-gmaps").magnificPopup({
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+
+        $('.magnific-mix-gallery').each(function() {
+            var $container = $(this);
+            var $imageLinks = $container.find('.item');
+
+            var items = [];
+            $imageLinks.each(function() {
+                var $item = $(this);
+                var type = 'image';
+                if ($item.hasClass('magnific-iframe')) {
+                    type = 'iframe';
+                }
+                var magItem = {
+                    src: $item.attr('href'),
+                    type: type
+                };
+                magItem.title = $item.data('title');
+                items.push(magItem);
+            });
+
+            $imageLinks.magnificPopup({
+                mainClass: 'mfp-fade',
+                items: items,
+                gallery: {
+                    enabled: true,
+                    tPrev: $(this).data('prev-text'),
+                    tNext: $(this).data('next-text')
+                },
+                type: 'image',
+                callbacks: {
+                    beforeOpen: function() {
+                        var index = $imageLinks.index(this.st.el);
+                        if (-1 !== index) {
+                            this.goTo(index);
+                        }
+                    }
+                }
+            });
+        });
